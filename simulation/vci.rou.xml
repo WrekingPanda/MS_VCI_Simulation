@@ -1,0 +1,22 @@
+<routes>
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="5" maxSpeed="70" />
+
+    <route id="r_east_to_west" edges="1062943 1062244" />
+    <route id="r_0" edges="1189928 2011031 1051056 1051048 1063681 1063682 1063509 1062243 1062244 1047385 1051036 1051037 1051038" />
+    
+    <flow id="flow_east" 
+          type="car" 
+          route="r_east_to_west" 
+          begin="0" 
+          end="600" 
+          vehsPerHour="600" />
+          
+    <flow id="flow_0" 
+          type="car" 
+          route="r_0" 
+          begin="0" 
+          end="600" 
+          vehsPerHour="1800" />
+</routes>
+
+<!-- run the sim with 'sumo-gui -c vci.sumocfg' -->
