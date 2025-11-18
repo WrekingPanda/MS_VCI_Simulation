@@ -10,7 +10,9 @@ entrance_edge_map = {
     'Freixo': '1122620',
     'Oliveira_Douro': '30454',
     'Antas': '1250858',
-    'Boavista': '6075'
+    'Boavista': '6075',
+    'r0':'1189928', 
+    'r1':'1936552'
 }
 
 sumocfg_file = "planner.sumo.cfg.xml"  # ou net.net.xml ? 
