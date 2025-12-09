@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-11-18 16:53:00 by Eclipse SUMO netedit Version 1.24.0
+<!-- generated on 2025-11-25 16:55:12 by Eclipse SUMO netedit Version 1.24.0
 <neteditConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
-        <sumo-net-file value="C:\Users\Paulo Alexandre\Documents\PauloAlexandre\Ensino_Superior\MIA\1_Ano\1_Semestre\MS\Projeto\MS_VCI_Simulation\simulation\net.net.xml"/>
+        <sumo-net-file value="C:\Users\gapmd\workspace\ms_project\MS_VCI_Simulation\simulation\net.net.xml"/>
     </input>
 
     <output>
-        <output-file value="C:\Users\Paulo Alexandre\Documents\PauloAlexandre\Ensino_Superior\MIA\1_Ano\1_Semestre\MS\Projeto\MS_VCI_Simulation\simulation\net.net.xml"/>
+        <output-file value="C:\Users\gapmd\workspace\ms_project\MS_VCI_Simulation\simulation\net.net.xml"/>
     </output>
 
     <processing>

@@ -4,20 +4,7 @@
     <route id="r0" edges="1189928 2011031 1051056 1051048 1063681 1063682 1063509 1062243 1062244 1047385 1051036 1051037 1051038" />
     <route id="r1" edges="1936552 1254022 1214664 1214665 1214220 1019576 1063944 1063921 1122621 1122616 1122617 1020008 1020009 2020467 1250858 1062922 1188058 1071243 1071244 1016652 1016653 1016654 1949244 1949245 1051020 1051021 1051022 1051023 1062317 1062318" />
     
-    <flow id="flow0" 
-          type="car" 
-          route="r0" 
-          begin="0" 
-          end="600" 
-          vehsPerHour="1800" />
+    <flow id="flow0" type="car" route="r0" begin="0" end="600" vehsPerHour="1800" />
 
-    <flow id="flow1" 
-          type="car" 
-          route="r1" 
-          begin="0" 
-          end="600" 
-          vehsPerHour="1800" />
+    <flow id="flow1" type="car" route="r1" begin="0" end="600" vehsPerHour="1500" />
 </routes>
-
-<!-- run the sim with 'sumo-gui -c vci.sumocfg' -->
-<!-- Creating routes: Demand -> Route mode -> create route -> select route with inspect mode -->
