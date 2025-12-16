@@ -2,6 +2,7 @@
     <input>
         <net-file value="net.net.xml"/>
         <route-files value="vci.rou.xml"/>
+        <additional-files value="vci.add.xml"/>
     </input>
 
     <time>

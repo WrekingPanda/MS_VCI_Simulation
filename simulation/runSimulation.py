@@ -46,13 +46,24 @@ def run_simulation(use_gui=True):
     cmd = [sumo_binary, "-c", CONFIG_FILE, "--start", "--quit-on-end", "--delay", "100"]    # delay (measured in ms) allows GUI visualization
     
     print(f"  > Starting SUMO ({sumo_binary})...")
-    subprocess.run(cmd, check=True)
-    print("  > Simulation finished.")
+    result = subprocess.run(cmd, check=True, capture_output=True, text=True)
+    
+    # Check if SUMO crashed
+    if result.returncode != 0:
+        print("\nFATAL ERROR: SUMO crashed!")
+        print("--------------------------------------------------")
+        print("Here is the error message from SUMO:")
+        print(result.stderr)  # <--- This prints the actual reason!
+        print("--------------------------------------------------")
+        exit() # Stop the script so you can read the error
+    else:
+        print("  > Simulation finished successfully.")
+        
 
 # --- MAIN EXPERIMENT LOOP ---
 if __name__ == "__main__":
     # Let's try 3 different flow levels to see the difference
-    test_values = [200, 800, 1600]
+    test_values = [400, 800, 1600]
 
     for i, flow in enumerate(test_values):
         print(f"\n--- Running Experiment {i+1}: Flow = {flow} vehs/hour ---")
