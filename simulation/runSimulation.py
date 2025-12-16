@@ -43,16 +43,16 @@ def run_simulation(use_gui=True):
     # Arguments explained:
     # --autostart: Starts the sim immediately without waiting for you to press Play
     # --quit-on-end: Closes the window automatically when the simulation finishes
-    cmd = [sumo_binary, "-c", CONFIG_FILE, "--autostart", "--quit-on-end"]
+    cmd = [sumo_binary, "-c", CONFIG_FILE, "--start", "--quit-on-end", "--delay", "100"]    # delay (measured in ms) allows GUI visualization
     
     print(f"  > Starting SUMO ({sumo_binary})...")
-    subprocess.run(cmd)
+    subprocess.run(cmd, check=True)
     print("  > Simulation finished.")
 
 # --- MAIN EXPERIMENT LOOP ---
 if __name__ == "__main__":
     # Let's try 3 different flow levels to see the difference
-    test_values = [200, 800, 1500]
+    test_values = [200, 800, 1600]
 
     for i, flow in enumerate(test_values):
         print(f"\n--- Running Experiment {i+1}: Flow = {flow} vehs/hour ---")
