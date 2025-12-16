@@ -42,4 +42,13 @@
     <inductionLoop id="121742_1" lane="1254017_1" pos="10" freq="300" file="sensor_output.xml" />
     <inductionLoop id="121742_2" lane="1254017_2" pos="10" freq="300" file="sensor_output.xml" />
 
+    <inductionLoop id="121754_0" lane="1175979_0" pos="10" freq="300" file="sensor_output.xml" />
+    <inductionLoop id="121754_1" lane="1175979_1" pos="10" freq="300" file="sensor_output.xml" />
+
+    <inductionLoop id="121755_0" lane="1176005_0" pos="10" freq="300" file="sensor_output.xml" />
+    <inductionLoop id="121755_1" lane="1176005_1" pos="10" freq="300" file="sensor_output.xml" />
+
+    <inductionLoop id="121756_0" lane="1181559_0" pos="10" freq="300" file="sensor_output.xml" />
+    <inductionLoop id="121756_1" lane="1181559_1" pos="10" freq="300" file="sensor_output.xml" />
+
 </additional>
