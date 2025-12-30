@@ -1,6 +1,6 @@
 from simulation import VCISimulation
 from agents import EntranceAgent, VehicleAgent
-from data_loader import TrafficDataHandler
+from load_data import TrafficDataHandler
 import pandas as pd
 import numpy as np
 import time
@@ -20,7 +20,7 @@ def run_experiment(approach='B', mock=False, gui=False):
     data_handler = None
     if not mock:
         print("Loading Real Traffic Data...")
-        data_handler = TrafficDataHandler("drive/AEDL2013_2015")
+        data_handler = TrafficDataHandler(r"C:\Users\Paulo Alexandre\Documents\PauloAlexandre\Ensino_Superior\MIA\1_Ano\1_Semestre\MS\Projeto\MS_VCI_Simulation\Dataset")
         # Load a subset for performance or full dataset
         data_handler.load_data("2013AEDL.csv") 
         data_handler.clean_and_impute()
@@ -235,4 +235,4 @@ if __name__ == "__main__":
     # To run with SUMO GUI: set mock=False, gui=True
     # To run Mock: set mock=True, gui=False
     # Setting mock=False to enable real simulation as requested
-    run_experiment(approach='B', mock=False, gui=True)
+    run_experiment(approach='B', mock=False, gui=False)

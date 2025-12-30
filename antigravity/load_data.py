@@ -31,9 +31,11 @@ class TrafficDataHandler:
                 # Use latin-1 or similar if utf-8 fails, based on previous experience
                 try:
                     df = pd.read_csv(file, parse_dates=['AGG_PERIOD_START'])
+                    print(df.head(5))
                 except UnicodeDecodeError:
                     df = pd.read_csv(file, parse_dates=['AGG_PERIOD_START'], encoding='latin-1')
                     
+
                 # Select only relevant columns to save memory
                 keep_cols = [
                     'EQUIPMENTID', 'AGG_PERIOD_START', 'TOTAL_VOLUME', 

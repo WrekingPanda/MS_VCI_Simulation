@@ -5,7 +5,7 @@ import sys
 import random
 
 class VCISimulation:
-    def __init__(self, config_file="drive/Sumo/Simulação/planner.sumo.cfg.xml", 
+    def __init__(self, config_file=r"C:\Users\Paulo Alexandre\Documents\PauloAlexandre\Ensino_Superior\MIA\1_Ano\1_Semestre\MS\Projeto\MS_VCI_Simulation\Dataset\Sumo\Simulação\planner.sumo.cfg.xml", 
                  detector_file="detectors.add.xml", 
                  gui=False,
                  mock=False):
