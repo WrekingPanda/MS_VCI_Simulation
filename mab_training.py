@@ -214,6 +214,21 @@ sensor_id_to_detectors = {121726: ["121726_0", "121726_1", "121726_2"],
                           121755: ["121755_0", "121755_1"],
                           121756: ["121756_0", "121756_1"]}
 
+# Map the real sensors to the direction of the road they monitor ('C' or 'D')
+sensor_direction = {121726: 'D',
+                    121727: 'D',
+                    121731: 'C',
+                    121732: 'C',
+                    121733: 'C',
+                    121734: 'C',
+                    121735: 'C',
+                    121736: 'C',
+                    121741: 'C',
+                    121742: 'C',
+                    121754: 'D',
+                    121755: 'C',
+                    121756: 'C'}
+
 def run_sumo_episode(trips, sensor_edge_map, sensor_id_to_detectors):
     """
     trips: [(veh_id, depart, start_edge, end_edge, arm), ...]
@@ -276,8 +291,7 @@ def run_sumo_episode(trips, sensor_edge_map, sensor_id_to_detectors):
                     step_count += traci.inductionloop.getLastStepVehicleNumber(det_id)
 
                 if step_count > 0:
-                    # TODO: use proper direction; placeholder "C" for now
-                    arm_key = (current_half_bin, sensor_id, "C")
+                    arm_key = (current_half_bin, sensor_id, sensor_direction[sensor_id])
                     sim_counts[arm_key] += step_count
 
             step += 1
