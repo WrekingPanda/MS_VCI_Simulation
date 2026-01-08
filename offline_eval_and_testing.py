@@ -67,10 +67,33 @@ dfm = pd.DataFrame(metrics)
 # RESULTS
 # ----------------------------------------------------------------------
 
+global_mean = dfm.real.mean()
+dfm["baseline_abs_err"] = abs(global_mean - dfm.real)
+
+
 print("\n================ OFFLINE BANDIT TEST RESULTS ================")
+print("Baseline MAE:", dfm.baseline_abs_err.mean())
 print(f"MAE  : {dfm.abs_err.mean():.2f}")
+
+daily = dfm.groupby("date")[["real", "pred"]].sum()
+daily["abs_err"] = abs(daily.pred - daily.real)
+print(f"Daily Absolute MAE: {daily.abs_err.mean():.2f}")
+daily["rel_err"] = abs(daily["pred"] - daily["real"]) / daily["real"].replace(0, np.nan)
+print("Daily Relative Error:", daily["rel_err"].mean())
+
 print(f"RMSE : {np.sqrt(dfm.sq_err.mean()):.2f}")
-print(f"MAPE : {dfm.ape.mean() * 100:.2f}%")
+nrmse = np.sqrt(dfm.sq_err.mean()) / dfm.real.mean()
+print(f"NRMSE: {nrmse:.2f}")
+
+# print(f"MAPE : {dfm.ape.mean() * 100:.2f}%")
+smape = (
+    2 * abs(dfm.pred - dfm.real) /
+    (abs(dfm.real) + abs(dfm.pred)).replace(0, np.nan)
+).mean()
+print(f"SMAPE: {smape * 100:.2f}%")
+
+wape = dfm.abs_err.sum() / dfm.real.sum()
+print(f"WAPE : {wape * 100:.2f}%")
 print("============================================================")
 
 print(f"[INFO] Evaluated {len(dfm)} arm observations.")
