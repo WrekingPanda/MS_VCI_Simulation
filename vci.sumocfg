@@ -1,0 +1,13 @@
+<configuration>
+    <input>
+        <net-file value="net.net.xml"/>
+        <route-files value="vci.rou.xml"/>
+        <additional-files value="vci.add.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="600"/>
+        <step-length value="1"/>
+    </time>
+</configuration>
