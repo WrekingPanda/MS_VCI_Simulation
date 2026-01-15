@@ -6,11 +6,11 @@ import sumolib
 import traci
 
 # CONFIG
-# Set the paths for your machine
+# Set the paths for your machine (Check if this matches your actual installation path)
 SUMO_GUI = "C:\Program Files (x86)\Eclipse\Sumo\bin\sumo-gui.exe"
+
 SUMO_CFG = "vci.sumocfg"
 NET_FILE = "net.net.xml"
-
 MODEL_FILE = "vci_bandit_model.pkl"
 ROUTE_FILE = "demo_bandit_routes.rou.xml"
 
