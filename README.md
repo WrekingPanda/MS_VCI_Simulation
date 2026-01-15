@@ -95,6 +95,6 @@ This README emphasizes that users need to **manually verify and update paths** i
 
 This project was developed by:
 
-- António Santos (@totas30)
-- Gonçalo Dias (@Gonto03)
-- Paulo Silva (@WrekingPanda)
+- [António Santos](https://github.com/totas30)
+- [Gonçalo Dias](@Gonto03)
+- [Paulo Silva](@WrekingPanda)
