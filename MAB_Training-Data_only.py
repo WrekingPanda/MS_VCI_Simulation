@@ -17,9 +17,9 @@ print(f"[INFO] Training samples: {n_rows}")
 # DEFINE ARMS
 # Change the return line depending on the desired time interval
 def make_arm(row):
-    # return (int(row["half_time_bin"]), int(row["EQUIPMENTID"]))
+    return (int(row["half_time_bin"]), int(row["EQUIPMENTID"]))
     # return (int(row["one_time_bin"]), int(row["EQUIPMENTID"]))
-    return (int(row["min_since_midnight"]), int(row["EQUIPMENTID"]))
+    # return (int(row["min_since_midnight"]), int(row["EQUIPMENTID"]))
 
 df["arm"] = df.apply(make_arm, axis=1)
 
