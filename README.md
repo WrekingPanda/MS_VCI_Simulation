@@ -1,4 +1,4 @@
-# MS_VCI_Simulation
+# Microscopic Simulation of Traffic on the Inner Ring of Porto’s VCI
 
 A traffic simulation project using Eclipse SUMO for creating a digital twin of Porto's Via de Cintura Interna (VCI) with Vehicle-to-Infrastructure Communication capabilities.
 
